@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+	<title>测试报告</title>
+
+	<style type="text/css">
+
+/* 灰白相间的表格样式 */ 
+	.dataintable {
+	margin-top:5px;
+	border-collapse:collapse;
+	border:1px solid #aaa;
+	width:100%;
+	}
+
+	.dataintable th {
+	vertical-align:center;
+	padding:5px 15px 5px 6px;
+	background-color:#F5F5F5;
+	border:1px solid #aaa;
+	text-align:left;
+/*	color:#aaa;*/
+	}
+
+	.dataintable td {
+	vertical-align:text-top;
+	padding:5px 15px 5px 6px;
+	border:1px solid #aaa;
+	}
+
+	.dataintable tr:nth-child(odd) {
+	background-color:#F5F5F5;
+	}
+
+	.dataintable tr:nth-child(even) {
+	background-color:#fff;
+	}
+	
+	body {
+    font-family: arial;
+  	}
+
+/* 自适应表格样式 */ 
+  .mytable {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+    }
+
+  .mytable tr {
+/*    border: 1px solid #000;*/
+    padding: 5px;
+    text-align: left;
+    }
+
+   .mytable td {
+   	border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+    }
+
+    .mytable th{
+  	border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    }
+
+  @media screen and (max-width: 600px) {
+
+    .mytable {
+      border: 0;
+    }
+
+    .mytable thead {
+      display: none;
+    }
+
+    .mytable tr {
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 1px dotted #000;
+    }
+
+    .mytable td {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      border-bottom: 1px dotted #000;
+    }
+
+    .mytable td:last-child {
+      border-bottom: 1px solid #000;
+    }
+
+    .mytable td:before {
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+}
+
+	.note{max-width: 80%; margin: 0 auto;}
+
+</style>	
+</head>
+
+<body>
+
+<h3>请查收测试报告，查看执行详细信息请移步：xxx</h3>
+
+<!-- 测试报告基本信息 -->
+<h3 align="center">测试报告基本信息</h3>
+<table class="dataintable">
+
+<tr>
+<td>测试计划名：</td>
+<td>xxx测试</td>
+</tr>
+
+<tr>
+<td>测试计划描述：</i></td>
+<td>具体执行测试</td>
+</tr>
+
+<tr>
+<td>执行开始时间：</td>
+<td>xxxx年xx月xx日</td>
+</tr>
+
+<tr>
+<td>执行结束时间：</td>
+<td>xxxx年xx月xx日</td>
+</tr>
+
+<tr>
+<td>执行耗时：</td>
+<td>xx小时xx分xx秒</td>
+</tr>
+
+<tr>
+<td>用例总数：</td>
+<td>xx条</td>
+</tr>
+
+<tr>
+<td>总失败用例数：</td>
+<td>xx条</td>
+			
+</tr>
+
+<tr>
+<td>总的通过率：</td>
+<td>xx条</td>
+</tr>
+
+</table>
+<br/>
+
+<!-- 子计划执行汇总报告表格 -->
+
+<h3 align="center">子计划执行情况汇总表</h3>
+<table class="mytable">
+
+	<thead>
+    <tr>
+      <th>TestPlanID</th>
+      <th>TestPlanName</th>
+      <th>Fail/Total</th>
+      <th>PassRate</th>
+    </tr>
+    </thead>
+
+
+  <tbody>
+
+    <tr>
+
+		<td data-label="TestPlanID" >01</td>
+		<td data-label="TestPlanName" >rachel's testcase 01</td>
+		<td data-label="Fail/Total">0/1</td>
+		<td data-label="PassRate"  style="color:#00BB00;">100%</td>
+	</tr>
+
+	<tr>
+		<td data-label="TestPlanID" >02</td>
+		<td data-label="TestPlanName" >rachel's testcase02</td>
+		<td data-label="Fail/Total">1/1</td>
+        <td data-label="PassRate" style="color:#FF0000;">0%</td>
+
+    </tr>
+
+</tbody>
+</table>
+
+<br/>
+
+<!-- 所有用例执行汇总报告表格 -->
+<h3 align="center">所有用例执行情况汇总表</h3>
+<table class="mytable">
+	<thead>
+        <tr>
+            <th>TestCaseID</th>
+            <th>TestCaseName</th>
+            <th>Pass/Fail</th>
+        </tr>
+    </thead>
+
+    <tbody>	
+		<tr>
+			<td data-label="TestCaseID" >000</td>
+			<td data-label="TestCaseName"  >rachel's testcase</td>
+			<td data-label="Pass/Fail" >1/1</td>		
+		</tr>					
+	</tbody> 
+
+</table>
+<br/>
+
+<!-- 各子计划执行情况 -->
+<h3 align="center">各子计划执行情况</h3>
+
+<!-- 子计划基本信息 -->
+<table class="dataintable">
+	<tr>
+		<th>子计划ID</th>
+        <th>000</th>
+	</tr>
+
+	<tr>
+		<td>名称</td>
+        <td>rachel's testcase</td>
+	</tr>
+
+	<tr>
+		<td>总失败用例数</i></td>
+		<td>1条</td>
+	</tr>
+
+	<tr>
+		<td>通过率</td>
+		<td style="color:#FF0000;">50%</td>
+	</tr>
+
+</table>
+
+<!-- 子计划详细执行情况表格 -->
+<table class="mytable">
+	<thead>
+        <tr>
+            <th>TestCaseID</th>
+            <th>TestCaseName</th>
+            <th>Pass/Fail</th>
+         </tr>
+    </thead>
+
+    <tbody>
+		<tr>
+			<td data-label="TestCaseID" >01</td>
+			<td data-label="TestCaseName">rachel's testcase 01</td>
+			<td data-label="Pass/Fail" style="color:#00BB00;">1/0</td>		
+		</tr>
+
+		<tr>
+			<td data-label="TestCaseID" >02</td>
+			<td data-label="TestCaseName">rachel's testcase 02</td>
+			<td data-label="Pass/Fail" style="color:#FF0000;">0/1</td>		
+		</tr>					
+
+	</tbody> 
+</table>
+<br/>
+
+
+<br/>
+
+<h5>以上内容由测试平台自动发送,如有错误请联系xxx</h5>
+</body>
+</html>
